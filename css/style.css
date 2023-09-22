@@ -7,7 +7,7 @@
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: all .3s linear;
 
 }
@@ -204,7 +204,7 @@ header .navbar a.active{
 .about .content1 .cols p{
     color: white;
     font-size: 20px;
-    width: 350px;
+    width: 460px;
     margin-left: 100px;
 }
 
