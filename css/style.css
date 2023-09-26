@@ -222,7 +222,7 @@ header .navbar a.active{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border: 2px solid white; 
+    border: 2px solid white;
 }
 
 /* Workout Section */
@@ -271,6 +271,11 @@ header .navbar a.active{
     border-top-left-radius: 19px;
 }
 
+.image:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
 .title{
     text-align: center;
     padding: 5px;
@@ -285,19 +290,27 @@ header .navbar a.active{
     color: white;
 }
 
+.des p{
+    margin-left: 15px; 
+    margin-right: 15px;
+    font-size: 16px;
+}
+
 .des .workout_btn{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    background-color: white;
-    padding: 5px;
-    border-radius: 8px;
+    /* background-color: white; */
+    background-color: black;
+    color: white;
+    /* padding: 5px; */
+    /* border-radius: 8px; */
     cursor: pointer;
 }
 
 .des .workout_btn:hover{
     color: red;
     transition: .5s;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 /* Diet Section */
@@ -363,11 +376,12 @@ header .navbar a.active{
     margin: 36px;
     border: 2px solid white;
     transition: 1s;
-}
-
-.Diet .container .card:hover{
     box-shadow: 0 4px 11px #d3d1d1;
 }
+
+/* .Diet .container .card:hover{
+    box-shadow: 0 4px 11px #d3d1d1;
+} */
 
 .Diet .container .card img:hover{
     transform: scale(1.1);
@@ -379,7 +393,8 @@ header .navbar a.active{
 }
 
 .card .intro h1{
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    padding: 5px;
     color: red;
     text-decoration: underline;
     display: flex;
@@ -389,11 +404,11 @@ header .navbar a.active{
 }
 
 .card .intro p{
-    margin-top: 10px;
-    margin-bottom: 3px;
+    margin-top: 6px;
+    margin-bottom: 5px;
     color: white;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 15px; 
+    margin-right: 15px;
     font-size: 16px;
 }
 
