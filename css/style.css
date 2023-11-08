@@ -403,7 +403,7 @@ header .navbar a.active{
 
 /* Calculate BMI */
 
- .section_titles h1{
+ /* .section_titles h1{
     font-size: 2.5vw;
     display: flex;
     color: red;
@@ -520,7 +520,7 @@ header .navbar a.active{
 
 .color-white{
     color: var(--first-color);
-} 
+}  */
 
 /* Contact Us */
 

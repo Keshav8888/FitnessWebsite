@@ -271,7 +271,7 @@
 
     <!-- Calculate BMI -->
 
-    <div class="calculate section">
+    <!-- <div class="calculate section">
         <div class="calculate_container container grid">
             <div class="calculate_content">
                 <div class="section_titles">
@@ -303,7 +303,7 @@
 
             <img src="images/bmi-height_wt.jpeg" alt="BMI-image" class="calculate_img">
         </div>
-    </div>
+    </div> -->
 
     <!-- Contact Us -->
 
@@ -313,31 +313,31 @@
             </div>
 
             <div class="container">
-                <form onsubmit="sendemail(); reset(); return false;">
+                <form action="javascript:sendmail()" method="post" >
                 <div class="contactform">
                     <div class="formbox">
                         <div class="inputbox w50">
                         
-                            <input type="text" required>
+                            <input type="text" name="Firstname" id="Firstname" required="">
                             <span>First name</span>
                         </div>
                         <div class="inputbox w50">
-                            <input type="text" required>
+                            <input type="text" name="Lastname" id="Lastname" required="">
                             
                             <span>Last name</span>
                         </div>
                         <div class="inputbox w50">
-                            <input type="email" id="email" required>
+                            <input type="email" name="Email" id="Email" required="">
                            
                             <span>E-mail Address</span>
                         </div>
                         <div class="inputbox w50">
-                            <input type="text" required>
+                            <input type="text" name="Number" id="Number" required="">
                             
                             <span>Mobile Number</span>
                         </div>
                         <div class="inputbox w100">
-                            <textarea required></textarea>
+                            <textarea name="Message" id="Message" required=""></textarea>
                             
                             
                             <span>Write your message here..</span>
@@ -369,7 +369,39 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <script src="js/script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </body>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+
+    function sendmail(){
+        var fname=$('#Firstname').val();
+        var lname=$('#Lastname').val();
+        var email=$('#Email').val();
+        var number=$('#Number').val();
+        var message=$('#Message').val();
+
+        var Body='Firstname: '+fname+'<br>Lastname: '+lname+'<br>Email: '+email+'<br>Number: '+number+'<br>Message: '+message;
+    }
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "acerkeshav112@gmail.com",
+    Password : "Manjhaul@123",
+    To : 'keshavkumar93761@gmail.com',
+    From : "acerkeshav112@gmail.com",
+    Subject : "New Mail on Contact Us form from:"+fname,
+    Body : Body
+}).then(
+  message => {
+    if(message=='OK'){
+        alert('Your details has been sent.Thanks for visiting.');
+    }
+    else{
+        console.error (message);
+        alert('Something Error!!')
+    }
+  }
+);
+</script> -->
 </html>

@@ -39,49 +39,49 @@ var swiper = new Swiper(".home-slider", {
 
 // Calculate BMI
 
-const calculateForm = document.getElementById('calculate-form'),
-    calculateCm = document.getElementById('calculate-cm'),
-    calculateKg = document.getElementById('calculate-kg'),
-    calculateMessage = document.getElementById('calculate-message')
+// const calculateForm = document.getElementById('calculate-form'),
+//     calculateCm = document.getElementById('calculate-cm'),
+//     calculateKg = document.getElementById('calculate-kg'),
+//     calculateMessage = document.getElementById('calculate-message')
 
-const calculateBmi = (e) =>{
-        e.preventDefault()
+// const calculateBmi = (e) =>{
+//         e.preventDefault()
 
-    if(calculateCm.value === '' || calculateKg.value === ''){
-        calculateMessage.classList.remove('color-white')
-        calculateMessage.classList.add('color-red')
+//     if(calculateCm.value === '' || calculateKg.value === ''){
+//         calculateMessage.classList.remove('color-white')
+//         calculateMessage.classList.add('color-red')
 
-        calculateMessage.textContent = 'Fill the Height and Weight first.'
+//         calculateMessage.textContent = 'Fill the Height and Weight first.'
 
-        setTimeout(() =>{
-            calculateMessage.textContent = ''
-        },3000)
-    } else{
-        const cm = calculateCm.value / 100,
-            kg = calculateKg.value,
-            bmi = Math.round(kg / (cm * cm))
+//         setTimeout(() =>{
+//             calculateMessage.textContent = ''
+//         },3000)
+//     } else{
+//         const cm = calculateCm.value / 100,
+//             kg = calculateKg.value,
+//             bmi = Math.round(kg / (cm * cm))
 
-        if(bmi < 18.5){
-            calculateMessage.classList.add('color-white')
-            calculateMessage.textContent = `Your BMI is ${bmi} and you are skinny`
-        } else if(bmi < 25){
-            calculateMessage.classList.add('color-white')
-            calculateMessage.textContent = `Your BMI is ${bmi} and you are healthy`
-        } else{
-            calculateMessage.classList.add('color-white')
-            calculateMessage.textContent = `Your BMI is ${bmi} and you are overweight`
-        }
+//         if(bmi < 18.5){
+//             calculateMessage.classList.add('color-white')
+//             calculateMessage.textContent = `Your BMI is ${bmi} and you are skinny`
+//         } else if(bmi < 25){
+//             calculateMessage.classList.add('color-white')
+//             calculateMessage.textContent = `Your BMI is ${bmi} and you are healthy`
+//         } else{
+//             calculateMessage.classList.add('color-white')
+//             calculateMessage.textContent = `Your BMI is ${bmi} and you are overweight`
+//         }
 
-        calculateCm.value = ''
-        calculateKg.value = ''
+//         calculateCm.value = ''
+//         calculateKg.value = ''
 
-        setTimeout(() =>{
-            calculateMessage.textContent = ''
-        }, 4000)
-    }
-}
+//         setTimeout(() =>{
+//             calculateMessage.textContent = ''
+//         }, 4000)
+//     }
+// }
 
-calculateForm.addEventListener('submit', calculateBmi)
+// calculateForm.addEventListener('submit', calculateBmi)
 
 
 
